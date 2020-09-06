@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Friends</title>
+{% endblock %}
+
+{% block body %}
+  <h1>Friends</h1>
+    {% for friend in friends %}
+        <h2>Name: {{ friend.name}}</h2>
+            <p>Age: {{ friend.age }}</p>
+            <p>Address: {{ friend.address }}</p>
+            {% if friend.relationship %}
+                <p>Relationship Status: {{ friend.relationship }}</p>
+            {% else %}
+                <p>Relationship Status: Unknown</p>
+            {% endif %}
+    {% endfor %}
+{% endblock %}

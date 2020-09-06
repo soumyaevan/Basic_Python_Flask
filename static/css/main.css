@@ -1,0 +1,13 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cadetblue;
+}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+}
