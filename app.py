@@ -76,6 +76,17 @@ def new_post():
     else:
         return render_template("new_post.html")
 
+@app.route('/posts/blog/<string:text>',methods=['GET','POST'])
+def get_Blog(text):
+    author_text = BlogPost.query.filter_by(author=text).all()
+    title_text = BlogPost.query.filter_by(title=text).all()
+    if author_text:
+        return render_template("blog.html",posts=author_text)
+    elif title_text:
+        return render_template("blog.html",posts=title_text)
+    else:
+        return redirect('/posts')
+
 # Dynamic URL
 @app.route('/user/<string:name>')
 def print_name(name):

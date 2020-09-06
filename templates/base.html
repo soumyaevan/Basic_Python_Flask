@@ -35,7 +35,15 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-md-0">
-      <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      <input class="form-control" type="text" id="searchPost" name="searchPost" placeholder="Search By title or author" aria-label="Search Bt title or author">
+      <script type="text/javascript">
+      function myFunction() {
+      let text = document.getElementById("searchPost").value
+      let link = "/posts/blog/"+text
+      document.getElementById("searchLink").href = link;
+      }
+      </script>
+      <a class="btn btn-danger" href="#" id="searchLink" onclick="myFunction()"></a>
     </form>
   </div>
 </nav>
