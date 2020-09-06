@@ -7,3 +7,4 @@ Following are the technologies used inthis project:
 2. Flask
 3. Bootstrap
 4. html
+5. SQLite
